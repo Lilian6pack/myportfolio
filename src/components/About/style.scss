@@ -1,0 +1,179 @@
+.about {
+  height: calc(100vh - 112px);
+  color: white;
+  @media only screen and (max-width: 450px) {
+    height: auto;
+  }
+
+  & h1 {
+    font-family: "MonumentExtended";
+    font-size: 5em;
+    text-align: center;
+    @media only screen and (max-width: 680px) {
+      font-size: 4em;
+    }
+    @media only screen and (max-width: 550px) {
+      font-size: 3em;
+    }
+    @media only screen and (max-width: 380px) {
+      font-size: 2em;
+    }
+  }
+
+  &-content {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    text-align: justify;
+    margin: 0 auto;
+  }
+
+  &-content {
+    width: 51%;
+    margin: 0 auto;
+    text-align: left;
+    @media only screen and (max-width: 1080px) {
+      width: 85%;
+    }
+  }
+
+  &-languages {
+    font-family: "MonumentExtended";
+    margin-bottom: 1rem;
+  }
+
+  &-framework {
+    font-family: "MonumentExtended";
+    margin-bottom: 1rem;
+  }
+
+  &-ui {
+    font-family: "MonumentExtended";
+  }
+}
+
+.skills {
+  width: 50%;
+  margin: 2rem auto;
+  text-align: center;
+  & p {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+  }
+  & h2 {
+    margin-bottom: 0.5rem;
+  }
+}
+
+.scroll {
+  width: 100%;
+  display: flex;
+
+  & div {
+    color: white;
+    font-size: 4em;
+    white-space: nowrap;
+    font-weight: bold;
+    font-family: "MonumentExtended";
+    text-transform: uppercase;
+    animation: animate 40s linear infinite;
+    animation-delay: -40s;
+    @media only screen and (max-width: 1250px) {
+      font-size: 2em;
+    }
+  }
+
+  & div:nth-child(2) {
+    animation: animate2 40s linear infinite;
+    animation-delay: -20s;
+  }
+}
+
+@keyframes animate {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes animate2 {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-200%);
+  }
+}
+
+.anim {
+  position: relative;
+  width: 100%;
+  margin-top: 8rem;
+  overflow: hidden;
+  @media only screen and (max-width: 800px) {
+    margin-top: 0;
+  }
+}
+
+.scroll2 {
+  width: 100%;
+  display: flex;
+
+  & div {
+    color: white;
+    font-size: 4em;
+    white-space: nowrap;
+    font-weight: bold;
+    font-family: "MonumentExtended";
+    text-transform: uppercase;
+    animation: animate3 40s linear infinite;
+    animation-delay: -40s;
+    @media only screen and (max-width: 1250px) {
+      font-size: 2em;
+    }
+  }
+
+  & div:nth-child(2) {
+    animation: animate4 40s linear infinite;
+    animation-delay: -20s;
+  }
+}
+
+@keyframes animate3 {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes animate4 {
+  0% {
+    transform: translateX(-200%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.scroll2 div.dark {
+  border-top: 3px solid white;
+  border-bottom: 3px solid white;
+}
+
+.scroll div.dark {
+  border-top: 3px solid white;
+  border-bottom: 3px solid white;
+}
+
+.scroll2 div.light {
+  border-top: 3px solid #131313;
+  border-bottom: 3px solid #131313;
+}
+
+.scroll div.light {
+  border-top: 3px solid #131313;
+  border-bottom: 3px solid #131313;
+}

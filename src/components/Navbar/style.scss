@@ -1,0 +1,127 @@
+.navbar {
+  display: flex;
+  z-index: 4;
+  position: relative;
+  top: 0;
+  padding: 1rem;
+  justify-content: space-between;
+  align-items: center;
+
+  &-logo {
+    width: 70px;
+  }
+}
+
+.menu {
+  width: 80px;
+  height: 80px;
+  transition: all 0.5s ease-in-out !important;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &-btn {
+    width: 30px;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    transition: all 0.5s ease-in-out !important;
+  }
+
+  &-btn::before {
+    content: "";
+    transition: all 0.5s ease-in-out !important;
+    position: absolute;
+    width: 50px;
+    height: 3px;
+    border-radius: 5px;
+    background: #fff;
+    transform: translateY(-16px);
+  }
+  &-btn::after {
+    content: "";
+    transition: all 0.5s ease-in-out !important;
+    position: absolute;
+    width: 40px;
+    height: 3px;
+    border-radius: 5px;
+    background: #fff;
+    transform: translateY(16px);
+  }
+
+  &-btn.dark::before {
+    content: "";
+    transition: all 0.5s ease-in-out !important;
+    position: absolute;
+    width: 50px;
+    height: 3px;
+    border-radius: 5px;
+    background: #131313;
+    transform: translateY(-16px);
+  }
+  &-btn.dark::after {
+    content: "";
+    transition: all 0.5s ease-in-out !important;
+    position: absolute;
+    width: 40px;
+    height: 3px;
+    border-radius: 5px;
+    background: #131313;
+    transform: translateY(16px);
+  }
+}
+
+.menu-open .menu-btn {
+  transform: translateX(-50px);
+  background: transparent;
+}
+
+.menu-open .menu-btn::before {
+  transform: rotate(45deg) translate(35px, -35px);
+}
+
+.menu-open .menu-btn::after {
+  width: 50px;
+  transform: rotate(-45deg) translate(35px, 35px);
+}
+
+.menu-container {
+  position: absolute;
+  top: 50%;
+  list-style: none;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  @media only screen and (max-width: 750px) {
+    width: 100%;
+  }
+}
+
+.menu-link {
+  text-decoration: none;
+  color: white;
+  font-family: "MonumentExtended";
+  font-size: 7em;
+
+  @media only screen and (max-width: 1500px) {
+    font-size: 6em;
+  }
+  @media only screen and (max-width: 1260px) {
+    font-size: 5em;
+  }
+  @media only screen and (max-width: 1050px) {
+    font-size: 4em;
+  }
+  @media only screen and (max-width: 840px) {
+    font-size: 3em;
+  }
+}
+
+.menu-item {
+  overflow: hidden;
+  height: 135px;
+  @media only screen and (max-width: 750px) {
+    text-align: center;
+  }
+}

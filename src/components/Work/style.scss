@@ -1,0 +1,58 @@
+.work {
+  color: white;
+  height: auto;
+  padding-bottom: 3rem;
+
+  &-title {
+    margin: 2rem;
+    font-family: "MonumentExtended";
+    text-align: center;
+  }
+
+  &-desc {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.1em;
+    width: 600px;
+    font-weight: 200;
+    margin: 2rem auto;
+    @media only screen and (max-width: 650px) {
+      width: 80%;
+    }
+  }
+
+  &-screen {
+    width: 900px;
+    margin: 2rem;
+    display: flex;
+    @media only screen and (max-width: 950px) {
+      width: 100%;
+      padding: 2rem;
+    }
+  }
+
+  &-img-container {
+    display: flex;
+    justify-content: center;
+
+    @media only screen and (max-width: 950px) {
+      width: 100%;
+    }
+  }
+
+  &-link {
+    display: flex;
+    justify-content: center;
+    margin: 2rem;
+    font-family: "MonumentExtended";
+    text-decoration: none;
+    color: white;
+    font-size: 1em;
+  }
+}
+
+.bg-screen {
+  height: 500px;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}

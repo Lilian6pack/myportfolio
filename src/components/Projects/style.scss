@@ -1,0 +1,106 @@
+.card-wrapper {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-wrapper .card {
+  position: relative;
+  width: 530px;
+  height: 255px;
+  margin: 2rem 3rem;
+
+  @media only screen and (max-width: 1700px) {
+    width: 400px;
+    height: 200px;
+    margin: 2rem 2rem;
+  }
+}
+
+.card-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow-y: hidden;
+  filter: grayscale(0);
+  transition: filter 0.5 ease;
+}
+
+.card-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1);
+  transition: transform 0.5s ease, opacity 0.35s ease;
+}
+
+.card-image-outer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.card-text {
+  position: absolute;
+  left: 50%;
+
+  transform: translateX(-50%);
+  user-select: none;
+}
+
+.card-text-inner {
+  display: inline-block;
+  color: white;
+  font-size: 1.5em;
+
+  font-family: "MonumentExtended";
+  font-weight: 700;
+  letter-spacing: 2px;
+  overflow: hidden;
+}
+
+.card:hover .card-image {
+  transform: scale(1.15);
+}
+
+.card:hover .card-text-inner .char {
+  transform: translateY(0%);
+}
+
+.card-wrapper:hover > .card:not(:hover) .card-image {
+  opacity: 0.8;
+}
+
+.card-wrapper:hover > .card:not(:hover) .card-image-wrapper {
+  filter: grayscale(1);
+}
+
+h2 {
+  background-color: transparent !important;
+}
+
+.project-container {
+  overflow: hidden;
+  background-color: #131313;
+}
+
+.img-container {
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  transform: translateX(-50%);
+  width: 300px;
+  @media only screen and (max-width: 1700px) {
+    top: 35%;
+  }
+}
+
+.img-container img {
+  width: 100%;
+}
