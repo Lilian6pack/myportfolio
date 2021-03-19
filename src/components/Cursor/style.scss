@@ -10,6 +10,9 @@
   mix-blend-mode: difference;
   transition: all 150ms ease;
   transition-property: opacity, background-color, transform, mix-blend-mode;
+  @media only screen and (max-width: 750px) {
+    display: none;
+  }
 }
 .cursor--clicked {
   transform: translate(-50%, -50%) scale(0.9);

@@ -27,6 +27,7 @@
     @media only screen and (max-width: 950px) {
       width: 100%;
       padding: 2rem;
+      height: 80%;
     }
   }
 
@@ -55,4 +56,7 @@
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
+  @media only screen and (max-width: 500px) {
+    display: none;
+  }
 }
